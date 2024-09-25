@@ -56,8 +56,76 @@ a {
 
 .topo{
     height: 12vh;
-    background-color: yellow;
+    /* background-color: yellow; */
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.titulo-menu a {
+    color: var(--cor-escura);
+    font-size: 1.2rem;
+    /* background-color: aquamarine; */
+    padding: 1rem;
+    display: inline-block;
+}
+
+.menu a:hover , .menu a:focus {
+    background-color: var(--cor-intermediaria);
+}
+
+/* atenção! neste ponto, fazemos com que os links do menu iniciem escondidos (display:none) em telas pequenas. posteriormente com a ajuda do CSS combinado com o JS faremos os comandos necessarios para exibir/esconder de forma alternada */
+.links-menu {
+    display: none;
+
+    a {
+        color: var(--cor-escura);
+        font-weight: bold;
+        /* background-color: yellow; */
+        height: 50px;
+        display: flex;
+        align-items: center ;
+        justify-content: center;
+    }
+}
+
+.links-menu.aberto {
+    /* ativamos o flex para anular o display:none ( fazendo assin os links aparecem) e ao mesmo tempo ter os recursos do flex */
+    display: flex;
+    /* mudamos a direçao para coluna para voltar a exibir um link em cima do outro */
+    flex-direction:column;
+    /* usamos o position e coordenadas para ajustar a posição final e o tamanho que os links ocuparao na tela logo abaixo da palavra menu. */
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: var(--cor-clara);
+}
+
+/* exercicio
+
+1- cir uma regra especifica para formatar o artigo destaque com as seguintes configuraçoes:
+  altura de 88vh
+  imagem de fundo (fundo-destaque)
+  imagem de fundo deve ficar parada
+  use flex para alinhar totalmentre o meio
+  use flax para garantir que os textos fiquem um em cima do outro
+  
+2- crie uma regra para formatar o h2 e o contidos no destaque. faça com que os textos fiquem centralizados com  a cor clara.  */
+
+.destaque {
+    height: 88vh;
+    background-image:url(../imagens/fundo-destaque.jpg);
+    background-attachment: fixed;
+    display: flex;
+    /* flex-wrap: wrap;      */
+    /* align-content:center;  */
+    justify-content: center;
+  
+
+}
+
+.destaque h2,p {
+    text-align: center;    
+    color: var(--cor-clara);
+
 }
