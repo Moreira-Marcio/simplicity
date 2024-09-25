@@ -1,0 +1,63 @@
+*,*::after,*::before {box-sizing: border-box;}
+
+/* declaração de vatiavel para a paleta de cores */
+:root{
+    --cor-titulo:#4d4d4d;
+    --cor-texto:#333;
+    --cor-escura:#000;
+    --cor-clara: #fff;
+    --cor-intermediaria: #ececec;
+
+}
+
+
+
+/* reset em alguns elementos usados neste projeto */
+body,h1,h2, p , figure,.links-menu {
+   margin: 0;
+   padding: 0;
+   /* removendo marcadores da lista ul */
+   list-style: none ; 
+}
+
+/* importante poara medida relativa REM */
+
+html {
+    font-size: 16px;
+}
+
+body{
+    font-family: "Noto Sans", sans-serif;
+    color: var(--cor-texto);
+}
+
+image{
+    max-width: 100%;
+}
+
+a {
+        text-decoration: none;
+    }
+
+.titulo {
+    font-family:Raleway,sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1.6rem;
+    
+    /* formatando link dentro do h1 */
+    a {
+         background-color:var(--cor-escura) ;
+         color: var(--cor-clara);
+         padding: 0.3rem 1rem;
+         border-radius: 4px;
+    } 
+}
+
+.topo{
+    height: 12vh;
+    background-color: yellow;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
