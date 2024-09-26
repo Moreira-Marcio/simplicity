@@ -127,6 +127,10 @@ a {
 
     p {
         font-size: clamp(1.5rem, 3vw, 3rem);
+        animation-delay: 2s;
+        /* antes da animação: o elemento assume o estilo do primeiro keyframe (ou seja from). portanto assim, forçamos a iniciar com opacity zero e escala menor 30% */
+        animation-fill-mode: backwards;
+       
     }
   /* função clump() função util para redimencionamento responsoivo de acordo com criterios de tamanho minimo, ideal, variavel/responsivo e maximo.
   
@@ -141,5 +145,46 @@ a {
 .destaque h2, .destaque p {
     text-align: center;    
     color: var(--cor-clara);
+    /* aplicando animação */
+    animation-name: animaDestaque;
+    animation-duration: 2s;
+
 
 }
+
+
+/* criando a animação */
+
+@keyframes animaDestaque {
+    from {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+article  {
+    h2 {
+    padding: 1rem;
+    font-size: 1.4rem;
+    font-family: raleway,sans-serif;
+    color: var(--cor-titulo);
+    }
+    p {
+    padding: .5rem 0;
+    font-size: 1.2rem;
+     }
+
+     address {
+        font-style: normal;
+        font-size: 1.2rem;
+     }
+}
+
+.front-end , .historia , .localizacao {
+    text-align: center;
+}
+
