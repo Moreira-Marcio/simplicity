@@ -117,14 +117,28 @@ a {
     background-image:url(../imagens/fundo-destaque.jpg);
     background-attachment: fixed;
     display: flex;
-    /* flex-wrap: wrap;      */
-    /* align-content:center;  */
+    flex-wrap: wrap;     
+    align-content:center; 
     justify-content: center;
+
+    h2 {
+      font-size: clamp(3rem, 10vw, 7rem);
+    }
+
+    p {
+        font-size: clamp(1.5rem, 3vw, 3rem);
+    }
+  /* função clump() função util para redimencionamento responsoivo de acordo com criterios de tamanho minimo, ideal, variavel/responsivo e maximo.
   
+  clamp(
+  tamannho minimo
+  tamanho ideal/variavel/responsivo
+  tamanho maximo
+  )*/
 
 }
 
-.destaque h2,p {
+.destaque h2, .destaque p {
     text-align: center;    
     color: var(--cor-clara);
 
