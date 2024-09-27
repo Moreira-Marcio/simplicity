@@ -1,10 +1,14 @@
-*,*::after,*::before {box-sizing: border-box;}
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
 
 /* declaração de vatiavel para a paleta de cores */
-:root{
-    --cor-titulo:#4d4d4d;
-    --cor-texto:#333;
-    --cor-escura:#000;
+:root {
+    --cor-titulo: #4d4d4d;
+    --cor-texto: #333;
+    --cor-escura: #000;
     --cor-clara: #fff;
     --cor-intermediaria: #ececec;
 
@@ -13,11 +17,16 @@
 
 
 /* reset em alguns elementos usados neste projeto */
-body,h1,h2, p , figure,.links-menu {
-   margin: 0;
-   padding: 0;
-   /* removendo marcadores da lista ul */
-   list-style: none ; 
+body,
+h1,
+h2,
+p,
+figure,
+.links-menu {
+    margin: 0;
+    padding: 0;
+    /* removendo marcadores da lista ul */
+    list-style: none;
 }
 
 /* importante poara medida relativa REM */
@@ -26,47 +35,48 @@ html {
     font-size: 16px;
 }
 
-body{
+body {
     font-family: "Noto Sans", sans-serif;
     color: var(--cor-texto);
 }
 
-img{
+img {
     max-width: 100%;
 }
 
 a {
-        text-decoration: none;
-    }
+    text-decoration: none;
+}
 
 .titulo {
-    font-family:Raleway,sans-serif;
+    font-family: Raleway, sans-serif;
     text-transform: uppercase;
     font-weight: 800;
     font-size: 1.6rem;
-    
+
     /* formatando link dentro do h1 */
     a {
-         background-color:var(--cor-escura) ;
-         color: var(--cor-clara);
-         padding: 0.3rem 1rem;
-         border-radius: 4px;
-    } 
+        background-color: var(--cor-escura);
+        color: var(--cor-clara);
+        padding: 0.3rem 1rem;
+        border-radius: 4px;
+    }
 }
 
-.topo{
+.topo {
     position: sticky;
     top: 0;
-   
-    background-color:var(--cor-clara);
 
-    .limitador{
-     height: 12vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  
+    background-color: var(--cor-clara);
+
+    .limitador {
+        height: 12vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
     }
+    z-index: 3;
 }
 
 .limitador {
@@ -83,7 +93,8 @@ a {
     display: inline-block;
 }
 
-.menu a:hover , .menu a:focus {
+.menu a:hover,
+.menu a:focus {
     background-color: var(--cor-intermediaria);
 }
 
@@ -97,7 +108,7 @@ a {
         /* background-color: yellow; */
         height: 50px;
         display: flex;
-        align-items: center ;
+        align-items: center;
         justify-content: center;
     }
 }
@@ -106,7 +117,7 @@ a {
     /* ativamos o flex para anular o display:none ( fazendo assin os links aparecem) e ao mesmo tempo ter os recursos do flex */
     display: flex;
     /* mudamos a direçao para coluna para voltar a exibir um link em cima do outro */
-    flex-direction:column;
+    flex-direction: column;
     /* usamos o position e coordenadas para ajustar a posição final e o tamanho que os links ocuparao na tela logo abaixo da palavra menu. */
     position: absolute;
     left: 0;
@@ -127,15 +138,15 @@ a {
 
 .destaque {
     height: 88vh;
-    background-image:url(../imagens/fundo-destaque.jpg);
+    background-image: url(../imagens/fundo-destaque.jpg);
     background-attachment: fixed;
     display: flex;
-    flex-wrap: wrap;     
-    align-content:center; 
+    flex-wrap: wrap;
+    align-content: center;
     justify-content: center;
 
     h2 {
-      font-size: clamp(3rem, 10vw, 7rem);
+        font-size: clamp(3rem, 10vw, 7rem);
     }
 
     p {
@@ -143,9 +154,10 @@ a {
         animation-delay: 2s;
         /* antes da animação: o elemento assume o estilo do primeiro keyframe (ou seja from). portanto assim, forçamos a iniciar com opacity zero e escala menor 30% */
         animation-fill-mode: backwards;
-       
+
     }
-  /* função clump() função util para redimencionamento responsoivo de acordo com criterios de tamanho minimo, ideal, variavel/responsivo e maximo.
+
+    /* função clump() função util para redimencionamento responsoivo de acordo com criterios de tamanho minimo, ideal, variavel/responsivo e maximo.
   
   clamp(
   tamannho minimo
@@ -155,8 +167,9 @@ a {
 
 }
 
-.destaque h2, .destaque p {
-    text-align: center;    
+.destaque h2,
+.destaque p {
+    text-align: center;
     color: var(--cor-clara);
     /* aplicando animação */
     animation-name: animaDestaque;
@@ -173,31 +186,35 @@ a {
         opacity: 0;
         transform: scale(0.3);
     }
+
     to {
         opacity: 1;
         transform: scale(1);
     }
 }
 
-article  {
+article {
     h2 {
-    padding: 1rem;
-    font-size: 1.4rem;
-    font-family: raleway,sans-serif;
-    color: var(--cor-titulo);
+        padding: 1rem;
+        font-size: 1.4rem;
+        font-family: raleway, sans-serif;
+        color: var(--cor-titulo);
     }
-    p {
-    padding: .5rem 0;
-    font-size: 1.2rem;
-     }
 
-     address {
+    p {
+        padding: .5rem 0;
+        font-size: 1.2rem;
+    }
+
+    address {
         font-style: normal;
         font-size: 1.2rem;
-     }
+    }
 }
 
-.front-end , .historia , .localizacao {
+.front-end,
+.historia,
+.localizacao {
     text-align: center;
 }
 
@@ -248,8 +265,8 @@ tem menu de contexto */
     background-image: url(../imagens/fundo-madeira.jpg);
     background-attachment: fixed;
     background-size: cover;
-   
-   
+
+
 
     h2 {
         color: var(--cor-clara);
@@ -264,10 +281,10 @@ tem menu de contexto */
 
 }
 
-.localizacao iframe{
-    
-        width: 100%;
-        margin-top: 2rem;
+.localizacao iframe {
+
+    width: 100%;
+    margin-top: 2rem;
 
 
 }
@@ -276,15 +293,15 @@ tem menu de contexto */
     background-color: var(--cor-escura);
     color: var(--cor-clara);
     width: 100%;
-    height:30vh;
+    height: 30vh;
     display: flex;
     align-items: center;
     justify-content: center;
 
     p {
         text-align: center;
-        font-weight: bold;       
-      
+        font-weight: bold;
+
     }
 }
 
@@ -300,14 +317,15 @@ tem menu de contexto */
     }
 }
 
-table{
-    border-collapse:collapse;
+table {
+    border-collapse: collapse;
     text-indent: initial;
     border-spacing: 2px;
     border: solid 4px;
     align-items: center;
     margin: auto;
 }
+
 caption {
     text-transform: uppercase;
     font-size: 1.2rem;
@@ -315,34 +333,59 @@ caption {
 }
 
 th {
-    background-color:var(--cor-escura);
+    background-color: var(--cor-escura);
 
     color: var(--cor-clara);
     padding: .5rem;
     text-align: center;
- 
-   
+
+
 }
 
 td {
     border: solid 2px;
     padding: .4rem;
-    
+
 }
 
 td:first-child {
     text-align: left;
-   
+
 }
 
-td:nth-child(2){
+td:nth-child(2) {
     text-align: center;
 }
 
 td:last-child {
-    text-align:right;
+    text-align: right;
 }
 
 tr:nth-child(odd) {
     background-color: var(--cor-clara);
+}
+
+.galeria {
+  
+
+        
+
+   img {
+        border-radius: 50%;
+        transform: scale(0.8) rotate(20deg);
+        transition: 1s;
+        box-shadow: var(--cor-escura) 0 0 30px;
+
+
+
+    }
+
+    img:hover {
+        transform: rotate(0) scale(1);
+        
+        transition: 1s;
+
+
+    }
+
 }
