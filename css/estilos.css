@@ -389,3 +389,29 @@ tr:nth-child(odd) {
     }
 
 }
+
+/* media queries: sao regras de uso condicional de acordo com o tamanho de tela necessario para ajustes do site */
+
+
+
+@media screen and (min-width:600px) {
+    .titulo-menu {display:none}
+    .links-menu {display: flex;
+        li {width: 100%;}
+    }
+    .menu {
+        width: 60%;
+    }
+
+    
+}
+
+@media screen and (min-width: 1000px) {
+   html{
+    font-size: 18px;
+   }
+    .limitador {
+        max-width: 1000px;
+
+    }
+}
