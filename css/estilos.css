@@ -375,6 +375,9 @@ tr:nth-child(odd) {
         transform: scale(0.8) rotate(20deg);
         transition: 1s;
         box-shadow: var(--cor-escura) 0 0 30px;
+        margin-left: 5%;
+        text-align: center;
+       
 
 
 
