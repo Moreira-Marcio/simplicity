@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produtos-Simplicity</title>
-    <link rel="shortcut icon" href="imagens/favicon.png"type="image/png"sizes="64x64">
+    <title>Contato-Simplicity</title>
+    <link rel="shortcut icon" href="imagens/favicon.png" type="image/png" sizes="64x64">
     <!-- imoirtação das fontes do google(deve vir primeiro, antes do css) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,13 +32,98 @@
         </div>
     </header>
     <main>
-       
+        <article class="conteudo-interno limitador">
+            <h2>Contato</h2>
+            <p>
+                Entre em contato conosco para discutir seus projetos e necessidades. Preencha o formulário abaixo e
+                nossa equipe retornará em breve. Estamos ansiosos para trabalhar com você!
+            </p>
+
+
+            <p>Atenção: os campos <b>Nome</b>, <b>E-mail</b> e <b>Mensagem</b> são <u>obrigatórios</u>.</p>
+
+
+            <form autocomplete="off" action="" method="post">
+                <div>
+                    <label for="nome">Nome:</label>
+                    <input required type="text" name="nome" id="nome" placeholder="Digite o nome completo">
+                </div>
+
+                <div>
+                    <label for="email">E-mail:</label>
+                    <input required type="email" name="email" id="email">
+                </div>
+
+                <div>
+                    <label for="nascimento">Data de nascimento:</label>
+                    <input type="date" name="nascimento" id="nascimento">
+                </div>
+
+                <!-- INÍCIO HTML PARA CEP/ENDEREÇO -->
+                <div>
+                    <label for="cep">CEP: <br><span id="status"></span></label>
+                    <div id="area-do-cep">
+                        <!-- Usamos inputmode numerica para que
+                        o teclado virtual mostre números e para que não seja mostrado botões adicionais no navegador desktop. -->
+                        <input maxlength="9" inputmode="numeric" placeholder="Somente números" type="text" id="cep"
+                            name="cep" required> <br>
+                        <button id="buscar">Buscar</button>
+                    </div>
+                </div>
+                <div class="campos-restantes">
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" id="endereco" name="endereco" size="30">
+                </div>
+                <div class="campos-restantes">
+                    <label for="bairro">Bairro:</label>
+                    <input type="text" id="bairro" name="bairro">
+                </div>
+                <div class="campos-restantes">
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" id="cidade" name="cidade">
+                </div>
+                <div class="campos-restantes">
+                    <label for="estado">Estado:</label>
+                    <input type="text" id="estado" name="estado">
+                </div>
+                <!-- /FIM HTML PARA CEP/ENDEREÇO -->
+
+
+                <div>
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" name="telefone" id="telefone">
+                </div>
+
+                <div>
+                    <label for="assunto">Assunto:</label>
+                    <select name="assunto" id="assunto">
+                        <!-- Sempre deixe um option vazio para que o usuário escolha por conta própria. -->
+                        <option value=""></option>
+                        <option>Dúvidas</option>
+                        <option>Elogios</option>
+                        <option>Reclamações</option>
+                        <option>Outros</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="mensagem">Mensagem:</label>
+
+                    <!-- Sempre inicie e termine o textarea na mesma linha -->
+                    <textarea required name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
+                </div>
+                <button type="submit">Enviar dados</button>
+            </form>
+        </article>
+
     </main>
     <footer class="rodape">
         <p>
             Simplicity é um site fictico desenvolvido para fins educacionais &copy; <time>2024</time>
         </p>
     </footer>
+
+    <script src="js/menu.js"></script>
 
 </body>
 
