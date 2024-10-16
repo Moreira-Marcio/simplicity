@@ -43,7 +43,7 @@
             <p>Atenção: os campos <b>Nome</b>, <b>E-mail</b> e <b>Mensagem</b> são <u>obrigatórios</u>.</p>
 
 
-            <form autocomplete="off" action="" method="post">
+            <form autocomplete="off" action="https://formspree.io/f/mkgnnpny" method="post"  id="my-form">
                 <div>
                     <label for="nome">Nome:</label>
                     <input required type="text" name="nome" id="nome" placeholder="Digite o nome completo">
@@ -112,7 +112,8 @@
                     <!-- Sempre inicie e termine o textarea na mesma linha -->
                     <textarea required name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
                 </div>
-                <button type="submit">Enviar dados</button>
+                <button id="my-form-button" type="submit">Enviar dados</button>
+                <p id="my-form-status"></p>
             </form>
         </article>
 
